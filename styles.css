@@ -32,8 +32,6 @@ body
   letter-spacing: 0.1em;
   text-decoration: none;
 }
-#header a:hover {
-}
 #nav-bar {
   font-family: inherit;
   font-weight: normal;
@@ -57,6 +55,9 @@ body
 #nav-bar   li {
   display: inline;
   padding-left: 20px;
+}
+#nav-bar a:hover {
+  font-weight: bold;
 }
 .container {
   max-width: 1500px;
