@@ -33,8 +33,6 @@ body
   text-decoration: none;
 }
 #header a:hover {
-  font-weight: normal;
-  letter-spacing: 0.1em;
 }
 #nav-bar {
   font-family: inherit;
