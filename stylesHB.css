@@ -10,6 +10,7 @@ body
 
 #header
 {
+  font-family: inherit;
   border: solid;
   border-width: 5px;
   border-bottom-width: 5px;
@@ -36,6 +37,7 @@ body
   font-weight: bold;
 }
 #nav-bar {
+  font-family: inherit;
   font-weight: normal;
   border-bottom: solid 4px;
   border-left: solid;
