@@ -33,7 +33,6 @@ body
   text-decoration: none;
 }
 #header a:hover {
-  letter-spacing: .15em;
   font-weight: bold;
 }
 #nav-bar {
