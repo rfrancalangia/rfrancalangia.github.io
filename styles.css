@@ -2,30 +2,32 @@
 
 body
 {
-  color: #555;
+  color: #4A15F9;
   margin: 0;
 }
 
 #header
 {
-  background-color: #1abc9c;
+  background-color: #301A78;
   height: 150px;
   line-height: 150px;
 }
 #header-title {
+  margin: 0px 0px 50px 30px;
   display: block;
   float: left;
-  font-size: 20px;
+  font-size: 50px;
   font-weight: bold;
 }
 #header-nav {
   display: block;
   float: right;
+  font-size: 15px;
+  margin: 13px 10px 0px 0px;
 }
 #header-nav   li {
   display: inline;
   padding-left: 20px;
-  margin-top: 0;
 }
 #header a {
   color: white;
@@ -35,7 +37,6 @@ body
 }
 #header a:hover {
   color: #222;
-  text-transform: lowercase;;
   letter-spacing: 0.1em;
   text-decoration: none;
 }
