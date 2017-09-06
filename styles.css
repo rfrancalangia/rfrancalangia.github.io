@@ -32,9 +32,6 @@ body
   letter-spacing: 0.1em;
   text-decoration: none;
 }
-/*#header a:hover {
-  font-weight: bold;
-}*/
 #nav-bar {
   font-family: inherit;
   font-weight: normal;
