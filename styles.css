@@ -32,6 +32,9 @@ body
   letter-spacing: 0.1em;
   text-decoration: none;
 }
+#header a:hover {
+  font-weight: normal;
+}
 #nav-bar {
   font-family: inherit;
   font-weight: normal;
