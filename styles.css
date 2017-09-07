@@ -25,7 +25,6 @@ body
   font-size: 100px;
   font-weight: bold;
 }
-
 #header a {
   color: white;
   text-transform: uppercase;
@@ -71,16 +70,18 @@ body {
 .post, .about, .list {
   max-width: 800px;
   margin: 0 auto;
-  padding: 60px;
+  padding: 20px;
+}
+.about-content {
+  /*margin: 3px;*/
+  text-align: justify;
 }
 .post {
   nth-child: ;
 }
-.post-author img {
-  width: 50px;
-  height: 50px;
+.about-author img {
+  height: 382px;
   vertical-align: middle;
-  border-radius: 50%;
 }
 .post-author > span {
   margin-left: 16px;
@@ -96,19 +97,23 @@ body {
   background-color: #f2f2f2;
 }
 .list-title {
+  margin-top: 0px;
   font-size: 50px;
   margin-bottom: 0px;
 }
 .list-disclaimer {
-  font-size: 10px;
+  font-size: 15px;
+}
+.footer-disclaimer {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 15px;
+  color: Gray;
+  text-align: justify;
 }
 h1, h2, h3, h4 {
   color: #333;
 }
-p {
-  line-height: 1.5;
-}
-
 .about {
   text-align: center;
   align-items: center;
@@ -116,12 +121,29 @@ p {
 
 #footer {
   background: #2f2f2f;
-  padding: 20px 0;
+  padding: 30px 0;
 }
-footer > nav-bar {
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+#footer-nav-bar {
+  background-color: #301A78;
+  /*margin-left: 5px;*/
+  height: 15px;
+  line-height: 15px;
+  font-size: 15px;
+}
+#footer-nav a {
+  margin-left: 80px;
+  font-weight: normal;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+#footer-nav   li {
+  display: inline;
+  padding-left: 20px;
+}
+#footer-nav a:hover {
+  font-weight: bold;
 }
 #footer p {
     color: white;
