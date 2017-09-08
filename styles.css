@@ -7,7 +7,9 @@ body
   font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
-
+canvas {
+  border: #666 1px solid;
+}
 #header
 {
   font-family: inherit;
@@ -17,6 +19,7 @@ body
   background-color: #301A78;
   height: 100px;
   line-height: 100px;
+  z-index: 2;
 }
 #header-title {
   margin-left: 30px;
@@ -66,6 +69,14 @@ body {
   margin: 0;
   color: #333;
   font-family: 'Montserrat', sans-serif;
+}
+#btmLayer {
+  position: absolute;
+  z-index: 1;
+}
+#topLayer {
+  position: absolute;
+  z-index: 2;
 }
 .post, .about, .list {
   max-width: 800px;
@@ -121,6 +132,7 @@ h1, h2, h3, h4 {
 #footer {
   background: #2f2f2f;
   padding: 30px 0;
+  z-index: 2;
 }
 #footer-nav-bar {
   background-color: #301A78;

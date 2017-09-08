@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title> Hung Beats </title>
+  <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
   <body>
@@ -21,43 +22,52 @@
         </ul>
     </div>
   </div>
-  <div id="content">
-    <div class="list-container">
-      <div class="list">
-         <h3 class=list-title>The Playlist</h3>
-         <div class="list-content">
-          <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3A122954699%3Aplaylist%3A26chEQR9AbQfUMI1Bgigqp"
-            width="800" height="600" frameborder="0" allowtransparency="true"></iframe>
-            <div class="list-disclaimer">Apparently spotify only lets your
-              embed up to 200 songs. The playlist has over 300, for long term
-              listening use this link to go to the playlist on spotify. Youtube
-              and Apple Music playlists have not been made yet.
+    <div id="animaBox">
+      <div id="btmLayer">
+        <canvas height="742">
+        <script src="rain.js"></script>
+        </canvas>
+      </div>
+      <div id="topLayer">
+        <div id="content">
+          <div class="list-container">
+            <div class="list">
+               <h3 class=list-title>The Playlist</h3>
+               <div class="list-content">
+                <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3A122954699%3Aplaylist%3A26chEQR9AbQfUMI1Bgigqp"
+                  width="800" height="600" frameborder="0" allowtransparency="true"></iframe>
+                  <div class="list-disclaimer">Apparently spotify only lets your
+                    embed up to 200 songs. The playlist has over 300, for long term
+                    listening use this link to go to the playlist on spotify. Youtube
+                    and Apple Music playlists have not been made yet.
+                </div>
+               </div>
           </div>
-         </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class=container>
+          <div class=footer-disclaimer> The creators of this playlist and website do not own any of this
+            music. We pay for the use of the Spotify. We condemn the illegal
+            use (pirating or whatever the kids are doing these days) of any
+            music. We are very greatful for the artists that spend their time
+            to create the music we use to get through these tough times
+            (hangovers). The best way to get a hangover is to go to your favorite                  artist's show and then the best way to cure it is to come here and
+            let the music reign over you. Support musicians.
+          </div>
+        </div>
+        <div id="footer-nav-bar">
+          <div class="container">
+            <ul id="footer-nav">
+              <li><a href="playlist.html"> Playlist </a></li>
+              <li><a href="about.html"> About </a></li>
+              <li><a href="definition.html"> Definition </a></li>
+              <li><a href="mailto:rcfran17@g.holycross.edu">Send Email</a></li>
+            </ul>
+        </div>
+      </div>
+      </div>
+      </div>
     </div>
-  </div>
-</div>
-<div id="footer">
-  <div class=container>
-    <div class=footer-disclaimer> The creators of this playlist and website do not own any of this
-      music. We pay for the use of the Spotify. We condemn the illegal
-      use (pirating or whatever the kids are doing these days) of any
-      music. We are very greatful for the artists that spend their time
-      to create the music we use to get through these tough times
-      (hangovers). The best way to get a hangover is to go to your favorite                  artist's show and then the best way to cure it is to come here and
-      let the music reign over you. Support musicians.
-    </div>
-  </div>
-  <div id="footer-nav-bar">
-    <div class="container">
-      <ul id="footer-nav">
-        <li><a href="playlist.html"> Playlist </a></li>
-        <li><a href="about.html"> About </a></li>
-        <li><a href="definition.html"> Definition </a></li>
-        <li><a href="mailto:rcfran17@g.holycross.edu">Send Email</a></li>
-      </ul>
-  </div>
-</div>
-</div>
-</body>
+  </body>
 </html>
