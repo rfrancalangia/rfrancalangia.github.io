@@ -84,7 +84,7 @@ body {
   height: 100%;
 }
 .post, .about, .list {
-  max-width: 60%;
+  min-width: 60%;
   margin-left: 15%;
   margin-right: 15%;
   /*margin: 0 auto;*/
