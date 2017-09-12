@@ -89,6 +89,18 @@ body {
   margin-right: 15%;
   padding: 20px;
 }
+.post-content > p, .about-content > p, .about-author > h1 {
+    background-color: rgba(192,192,192,.9);
+}
+.about-content h3, .about-content ol, .about-content li {
+    background-color: rgba(192,192,192,.7);
+    text-align: left;
+}
+.about-content iframe {
+  max-width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
 .about-content {
   text-align: justify;
 }
@@ -113,6 +125,7 @@ body {
   background-color: #f2f2f2;
 }
 .list-title {
+  background-color: rgba(192,192,192,.7);
   margin-top: 0px;
   font-size: 50px;
   margin-bottom: 0px;
