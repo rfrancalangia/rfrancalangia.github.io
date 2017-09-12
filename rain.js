@@ -27,19 +27,25 @@ function Droplet(radius, color, x, y, Xvelo, Yvelo){
   this.update = function(){
     if ((this.y - this.radius) > canvas.height){ //|| ((this.y - this.radius < 0))){
       this.y = 0;
+      this.Xvelo = 0;
+      this.x = Math.random() * canvas.width;
     }
     if (((this.x + this.radius) > canvas.width) || ((this.x - this.radius < 0))){
       this.Xvelo *= -1;
     }
     this.y += this.Yvelo;
-
-    if ((mouse.x - this.x < 50) && (mouse.x - this.x > -50)
-        && (this.y + 50 >= mouse.y) && (this.y - 40 <= mouse.y)) {
-          if (this.radius < 10) {
-            this.radius += 1;
-      }
-    } else if (this.radius > 4){
-      this.radius -= 1;
+    this.x += this.Xvelo;
+    if ((mouse.x - this.x < 50) && (mouse.x - this.x > -50) && (this.y + 50 <= mouse.y) && (this.y + 50 >= mouse.y - 50)) {
+        if ((mouse.x - this.x < 50) && (mouse.x - this.x > 0)) {
+          this.Xvelo = -this.Yvelo / 2;
+        }
+        if ((mouse.x - this.x > -50) && (mouse.x - this.x < 0)) {
+          this.Xvelo = this.Yvelo / 2;
+        }
+    } else if (this.Xvelo > 0){
+      this.Xvelo -= .5;
+    } else if (this.Xvelo < 0){
+      this.Xvelo += .5;
     }
     this.drop();
   }
