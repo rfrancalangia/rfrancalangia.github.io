@@ -1,3 +1,14 @@
+var mouse = {
+  x: undefined,
+  y: undefined
+}
+
+window.addEventListener('mousemove',
+  function(event){
+    mouse.x = event.x;
+    mouse.y = event.y;
+
+  })
 function Droplet(radius, color, x, y, Xvelo, Yvelo){
   this.radius = radius;
   this.color = color;
@@ -21,13 +32,32 @@ function Droplet(radius, color, x, y, Xvelo, Yvelo){
       this.Xvelo *= -1;
     }
     this.y += this.Yvelo;
-    // this.x += this.Xvelo;
+
+    if ((mouse.x - this.x < 50) && (mouse.x - this.x > -50)
+        && (this.y + 50 >= mouse.y) && (this.y - 40 <= mouse.y)) {
+          if (this.radius < 10) {
+            this.radius += 1;
+      }
+    } else if (this.radius > 4){
+      this.radius -= 1;
+    }
     this.drop();
   }
 }
+function size(){
+  window.addEventListener('resize', resizeCanvas, false);
+  resizeCanvas();
+}
+function resizeCanvas(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  console.log(canvas.height);
+  console.log(canvas.width);
+}
 var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var ctx = canvas.getContext('2d');
 var circleArray = [];
 for (var i = 0; i < 2000; i++){
   var x = Math.random() * canvas.width;
@@ -46,4 +76,5 @@ function animate(){
     circleArray[i].update();
   }
 }
+size();
 animate();
