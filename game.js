@@ -101,7 +101,7 @@ function Snake(x, y){
   }
   this.dead = function(){
     if(this.total > 4){
-      for(var i = 1; i < this.total-1; i++){
+      for(var i = 0; i < this.total-1; i++){
         if (this.x == this.tail[i].x){
           if (this.y == this.tail[i].y){
             this.life = 0;
@@ -137,9 +137,9 @@ function eat(snake, bite){
 }
 var more = new Food();
 var fps = scl*4;
+var stopID;
 function animateGame(){
   setTimeout(function(){
-    requestAnimationFrame(animateGame);
     ctxGame.clearRect(0, 0, canvas.width, canvas.height);
     if(s.life == 1){
       s.show();
@@ -149,6 +149,23 @@ function animateGame(){
       s.dead();
       s.update();
     }
+    stopID = requestAnimationFrame(animateGame);
+    if (s.life == 0){
+      ctxGame.font = "30px Arial";
+      ctxGame.fillText("Game Over", 50, 50);
+      cancelAnimationFrame(stopID);
+    }
   }, 1000/fps);
 }
-animateGame();
+function play(){
+  animateGame();
+  if (s.life == 0){
+    s.life = 1;
+    s.total = 0;
+    s.tail = [];
+    s.x = 0;
+    s.y = 0;
+    s.xspeed = 1;
+    s.yspeed = 0;
+  }
+}

@@ -83,11 +83,20 @@ body {
   width: 100%;
   height: 100%;
 }
+#letsPlay{
+  /*display: inline;*/
+  margin-left: 20%;
+  margin-top: 10%;
+  background-color: silver;
+  max-width: 100px;
+  margin-bottom: 0;
+  border: #666 solid;
+}
 #game {
   border: #666 1px solid;
   width: 800px;
   display: inline;
-  margin-top: 10%;
+  /*margin-top: 10%;*/
   background-color: rgba(192,192,192,.9);
 }
 #topLayer {
