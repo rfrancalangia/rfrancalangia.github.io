@@ -7,8 +7,7 @@ window.addEventListener('mousemove',
   function(event){
     mouse.x = event.x;
     mouse.y = event.y;
-
-  })
+  });
 function Droplet(radius, color, x, y, Xvelo, Yvelo){
   this.radius = radius;
   this.color = color;
@@ -60,7 +59,7 @@ function resizeCanvas(){
   console.log(canvas.height);
   console.log(canvas.width);
 }
-var canvas = document.querySelector('canvas');
+var canvas = document.getElementById('background-animation');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
