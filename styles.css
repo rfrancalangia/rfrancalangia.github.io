@@ -91,6 +91,14 @@ body {
   margin-bottom: 0;
   border: #666 solid;
 }
+#letsPlay1{
+  margin-left: 20%;
+  /*margin-top: 10%;*/
+  background-color: silver;
+  max-width: 100px;
+  margin-bottom: 0;
+  border: #666 solid;
+}
 #game {
   border: #666 1px solid;
   width: 800px;

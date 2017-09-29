@@ -23,6 +23,15 @@ function Food(){
     holder = this.y / scl;
     holder = Math.round(holder);
     this.y = scl * holder;
+    if (this.y >= canvasGame.height){
+      this.y -= scl;
+    }else if (this.y < 0){
+      this.y += scl;
+    }else if (this.x >= canvasGame.width){
+      this.y -= scl;
+    }else if (this.y < 0){
+      this.y += scl;
+    }
     ctxGame.beginPath();
     ctxGame.rect(this.x, this.y, scl, scl);
     ctxGame.fillStyle = 'green';
@@ -126,18 +135,27 @@ function move(){
     }
   }
 }
+var need = 0;
 function eat(snake, bite){
   if (snake.x == bite.x){
     if (snake.y == bite.y){
       snake.grow();
       bite.update();
       console.log("grow");
+      need = 0;
     }
   }
 }
+
 var more = new Food();
+function no_food(){
+  more.draw();
+  need = 1;
+}
+
 var fps = scl*4;
 var stopID;
+ctxGame.font = "10px Arial";
 function animateGame(){
   setTimeout(function(){
     ctxGame.clearRect(0, 0, canvas.width, canvas.height);
@@ -145,9 +163,13 @@ function animateGame(){
       s.show();
       bit.draw();
       move();
+      if (need == 1)
+        more.draw();
       eat(s, bit);
+      eat(s, more);
       s.dead();
       s.update();
+      ctxGame.fillText(s.total, 10, 10);
     }
     stopID = requestAnimationFrame(animateGame);
     if (s.life == 0){
