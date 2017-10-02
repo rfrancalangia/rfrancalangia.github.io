@@ -147,15 +147,12 @@ function eat(snake, bite){
   }
 }
 
-var more = new Food();
 function no_food(){
-  more.draw();
-  need = 1;
+  bit.update()
 }
 
 var fps = scl*4;
 var stopID;
-ctxGame.font = "10px Arial";
 function animateGame(){
   setTimeout(function(){
     ctxGame.clearRect(0, 0, canvas.width, canvas.height);
@@ -163,12 +160,10 @@ function animateGame(){
       s.show();
       bit.draw();
       move();
-      if (need == 1)
-        more.draw();
       eat(s, bit);
-      eat(s, more);
       s.dead();
       s.update();
+      ctxGame.font = "10px Arial";
       ctxGame.fillText(s.total, 10, 10);
     }
     stopID = requestAnimationFrame(animateGame);
